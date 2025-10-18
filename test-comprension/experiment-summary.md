@@ -79,6 +79,7 @@ La tabella seguente elenca tutti gli artefatti prodotti, con una descrizione del
 | **Analisi Finale**                                                               |
 | [`final-comparison-report.md`](./final-comparison-report.md)                     | **Report Comparativo**    | Confronta i risultati quantitativi e qualitativi dei due test, dichiarando il vincitore.           |
 | [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md) | **Analisi Qualitativa**   | Analizza in dettaglio _come_ le risposte dell'LLM sono cambiate tra i due formati.                 |
+| [`model-comparison.md`](./model-comparison.md)                                   | **Analisi Cross-Modello** | Confronta i risultati di Gemini e Claude, analizzando i loro comportamenti divergenti.             |
 | **Validazione del Processo**                                                     |
 | [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)                   | **Meta-Analisi**          | Documenta l'analisi sui potenziali bias e la validità complessiva dell'esperimento.                |
 | `experiment-summary.md`                                                          | **Questo Documento**      | Fornisce una mappa e una spiegazione dell'intero flusso di lavoro e dei suoi risultati.            |
@@ -86,5 +87,7 @@ La tabella seguente elenca tutti gli artefatti prodotti, con una descrizione del
 ---
 
 ## 🏁 Conclusione Finale
+
+La discrepanza nei risultati di Claude è la parte più affascinante dell'esperimento. Non significa che l'ipotesi "LLM-First è meglio" sia falsa, ma che la sua verità è condizionata da fattori specifici del modello e del task.
 
 L'esperimento ha dimostrato con successo che la strutturazione della documentazione secondo i principi **LLM-First** non è un semplice miglioramento, ma un cambiamento di paradigma. Rende la conoscenza direttamente "apprendibile" e utilizzabile da un'intelligenza artificiale, trasformandola da un "turista" nel testo a un "esperto" del dominio.
