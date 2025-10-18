@@ -56,9 +56,9 @@ I risultati dei due test sono stati confrontati e l'intero processo è stato sot
 - **Analisi Qualitativa Approfondita:** È stato analizzato _come_ le risposte dell'LLM sono cambiate, evidenziando il passaggio da "inferenza" a "lettura diretta".
     - _Artefatto:_ [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md)
 - **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
-    - _Artefatto:_ `model-comparison.md` (_Nota: Questo artefatto, sebbene parte dell'analisi, si concentra su un confronto cross-modello tra Gemini e Claude._)
-- **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
     - _Artefatto:_ [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)
+- **Analisi Cross-Modello:** Sono stati confrontati i risultati tra diversi LLM (Gemini vs Claude) per analizzare comportamenti divergenti e arricchire le conclusioni.
+    - _Artefatto:_ `model-comparison.md`
 
 ---
 
@@ -84,12 +84,12 @@ La tabella seguente elenca tutti gli artefatti prodotti, con una descrizione del
 | [`model-comparison.md`](./model-comparison.md)                                   | **Analisi Cross-Modello** | Confronta i risultati di Gemini e Claude, analizzando i loro comportamenti divergenti.             |
 | **Validazione del Processo**                                                     |
 | [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)                   | **Meta-Analisi**          | Documenta l'analisi sui potenziali bias e la validità complessiva dell'esperimento.                |
-| `experiment-summary.md`                                                          | **Questo Documento**      | Fornisce una mappa e una spiegazione dell'intero flusso di lavoro e dei suoi risultati.            |
+| `readme.md`                                                                      | **Questo Documento**      | Fornisce una mappa e una spiegazione dell'intero flusso di lavoro e dei suoi risultati.            |
 
 ---
 
 ## 🏁 Conclusione Finale
 
-La discrepanza nei risultati di Claude è la parte più affascinante dell'esperimento. Non significa che l'ipotesi "LLM-First è meglio" sia falsa, ma che la sua verità è condizionata da fattori specifici del modello e del task.
-
 L'esperimento ha dimostrato con successo che la strutturazione della documentazione secondo i principi **LLM-First** non è un semplice miglioramento, ma un cambiamento di paradigma. Rende la conoscenza direttamente "apprendibile" e utilizzabile da un'intelligenza artificiale, trasformandola da un "turista" nel testo a un "esperto" del dominio.
+
+L'analisi cross-modello (es. con Claude) ha inoltre arricchito la tesi, mostrando che, sebbene l'ipotesi generale resti valida, i benefici si manifestano in modo diverso (accuratezza vs efficienza) a seconda delle capacità del modello e della complessità del task.
