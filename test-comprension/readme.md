@@ -1,4 +1,4 @@
-# Riepilogo dell'Esperimento: Human-First vs LLM-First
+# Saga di Lyra: Human-First vs LLM-First
 
 > **Meta-Nota:** Questo documento funge da indice e spiegazione per l'esperimento condotto sulla validazione dei principi "LLM-First". La sua struttura è ottimizzata per permettere a un LLM di comprendere, navigare e validare l'intero processo e i suoi risultati.
 
@@ -56,7 +56,7 @@ I risultati dei due test sono stati confrontati e l'intero processo è stato sot
 - **Analisi Qualitativa Approfondita:** È stato analizzato _come_ le risposte dell'LLM sono cambiate, evidenziando il passaggio da "inferenza" a "lettura diretta".
     - _Artefatto:_ [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md)
 - **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
-    - _Artefatto:_ `model-comparison.md` (*Nota: Questo artefatto, sebbene parte dell'analisi, si concentra su un confronto cross-modello tra Gemini e Claude.*)
+    - _Artefatto:_ `model-comparison.md` (_Nota: Questo artefatto, sebbene parte dell'analisi, si concentra su un confronto cross-modello tra Gemini e Claude._)
 - **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
     - _Artefatto:_ [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)
 
