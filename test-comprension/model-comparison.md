@@ -8,10 +8,11 @@ Questo documento analizza i risultati divergenti ottenuti eseguendo lo stesso es
 
 La tabella seguente riassume i punteggi finali ottenuti da entrambi i modelli sui due formati di testo.
 
-| Modello    | Formato A (Human-First) | Formato B (LLM-First) | Delta (B - A) | Comportamento Osservato                     |
-| :--------- | :---------------------- | :-------------------- | :------------ | :------------------------------------------ |
-| **Gemini** | 94.15 / 100             | **100 / 100**         | **+5.85**     | Miglioramento netto con la struttura.       |
-| **Claude** | **98.8 / 100**          | 94.9 / 100            | -3.9          | Peggioramento paradossale con la struttura. |
+| Modello            | Formato A (Human-First) | Formato B (LLM-First) | Delta (B - A) | Comportamento Osservato                     |
+| :----------------- | :---------------------- | :-------------------- | :------------ | :------------------------------------------ |
+| **Gemini**         | 94.15 / 100             | **100 / 100**         | **+5.85**     | Miglioramento netto con la struttura.       |
+| **Gemini 2.5 Pro** | 94.33 / 100             | **100 / 100**         | **+5.67**     | Risultato coerente, conferma la tesi.       |
+| **Claude**         | **98.8 / 100**          | 94.9 / 100            | -3.9          | Peggioramento paradossale con la struttura. |
 
 ---
 
@@ -33,7 +34,7 @@ Modelli come Claude 3 sono rinomati per la loro capacità di analizzare lunghi d
 
 ### Ipotesi 3: La Differenza tra "Accuratezza" ed "Efficienza"
 
-L'esperimento misura principalmente l'**accuratezza**. Tuttavia, un vantaggio chiave dell'approccio LLM-First risiede in altre metriche non misurate:
+L'esperimento misura principalmente l'**accuratezza**. Tuttavia, un vantaggio chiave dell'approccio LLM-First risiede in altre metriche non misurate direttamente dallo score:
 
 - **Testo Human-First:** ~33.500 caratteri
 - **Testo LLM-First:** ~20.500 caratteri
@@ -45,7 +46,17 @@ Per un modello come Claude che raggiunge il 98.8% di accuratezza sulla prosa, il
 
 ---
 
-## 3. Conclusione Raffinata dell'Esperimento
+## 3. Analisi dei Risultati di Gemini 1.5 Pro
+
+I risultati del test con Gemini 1.5 Pro sono estremamente coerenti con quelli del test originale, rafforzando la validità delle conclusioni per la famiglia di modelli Gemini.
+
+- **Coerenza del Risultato:** Il punteggio finale (94.33 vs 100) è quasi identico a quello del test originale (94.15 vs 100). Questo dimostra un'alta ripetibilità e conferma che il miglioramento di ~5.7 punti è un effetto stabile della formattazione.
+- **Conferma del Pattern di Errore:** Anche in questo test, la metrica che ha sofferto di più sul testo Human-First è stata la `Recall Accuracy` (83.33%), confermando che l'omissione di concetti dispersi nella prosa è il principale punto debole del formato narrativo.
+- **Efficacia del Formato Strutturato:** Il punteggio perfetto sul formato LLM-First dimostra ancora una volta che la struttura elimina gli errori di comprensione e trasforma il processo in un'estrazione dati deterministica.
+
+---
+
+## 4. Conclusione Raffinata dell'Esperimento
 
 Alla luce dei risultati di Claude, la conclusione dell'esperimento diventa più completa e sfumata:
 
