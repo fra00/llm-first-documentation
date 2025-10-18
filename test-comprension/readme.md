@@ -56,6 +56,8 @@ I risultati dei due test sono stati confrontati e l'intero processo è stato sot
 - **Analisi Qualitativa Approfondita:** È stato analizzato _come_ le risposte dell'LLM sono cambiate, evidenziando il passaggio da "inferenza" a "lettura diretta".
     - _Artefatto:_ [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md)
 - **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
+    - _Artefatto:_ `model-comparison.md` (*Nota: Questo artefatto, sebbene parte dell'analisi, si concentra su un confronto cross-modello tra Gemini e Claude.*)
+- **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
     - _Artefatto:_ [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)
 
 ---
