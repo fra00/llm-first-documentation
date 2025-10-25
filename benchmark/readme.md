@@ -1,95 +1,97 @@
-# Saga di Lyra: Human-First vs LLM-First
+# Saga of Lyra: Human-First vs. LLM-First
 
-> **Meta-Nota:** Questo documento funge da indice e spiegazione per l'esperimento condotto sulla validazione dei principi "LLM-First". La sua struttura è ottimizzata per permettere a un LLM di comprendere, navigare e validare l'intero processo e i suoi risultati.
-
----
-
-## 🎯 Obiettivo dell'Esperimento
-
-L'obiettivo primario era **dimostrare e quantificare** i benefici di una documentazione strutturata secondo i principi **LLM-First** rispetto a una documentazione tradizionale in prosa ("Human-First").
-
-L'ipotesi da validare è che un formato LLM-First trasforma la comprensione di un LLM da un processo di **inferenza fragile** a uno di **estrazione dati deterministica**, migliorando accuratezza, velocità e affidabilità.
+> **Meta-Note:** This document serves as an index and explanation for the experiment conducted to validate the "LLM-First" principles. Its structure is optimized to allow an LLM to understand, navigate, and validate the entire process and its results.
 
 ---
 
-## 🔬 Fasi e Flusso del Test
+## 🎯 Experiment Objective
 
-L'esperimento è stato condotto seguendo un protocollo strutturato. Ogni fase ha prodotto degli artefatti (file) che documentano il processo e i risultati.
+The primary objective was to **demonstrate and quantify** the benefits of documentation structured according to **LLM-First** principles compared to traditional prose documentation ("Human-First").
 
-### Fase 1: Preparazione del Materiale di Test
-
-In questa fase sono stati creati i due elementi di partenza: il contenuto da analizzare e il metodo per valutarlo.
-
-- **Creazione del Contenuto di Base:** È stato scritto un testo narrativo complesso, la "Saga di Lyra", come perfetto esempio di formato "Human-First". Le informazioni sono disperse nella prosa, rendendo difficile l'estrazione.
-    - _Artefatto:_ [`full-text.md`](./full-text.md)
-- **Definizione del Framework di Valutazione:** È stato creato un prompt di test standardizzato per misurare la comprensione di un LLM su più dimensioni (recall, dettagli, relazioni, etc.) e calcolare un punteggio oggettivo.
-    - _Artefatto:_ [`prompt-comprension.md`](./prompt-comprension.md)
-
-### Fase 2: Test sulla Baseline (Formato Human-First)
-
-È stato eseguito il test di comprensione sul testo "Human-First" per stabilire una metrica di performance di base.
-
-- **Esecuzione del Test:** L'LLM ha letto `full-text.md` e ha risposto alle domande del framework di valutazione.
-    - _Artefatto:_ [`human-text-comprehension.md`](./human-text-comprehension.md)
-- **Analisi dei Risultati:** L'LLM ha poi valutato le proprie risposte, calcolando le metriche di performance.
-    - _Artefatto:_ [`human-text-evaluation.md`](./human-text-evaluation.md)
-- **Risultato Breve:** Il modello ha ottenuto un punteggio di **94.15/100**. Un buon risultato, ma l'analisi ha rivelato omissioni e uno sforzo di "inferenza" per ricostruire la conoscenza.
-
-### Fase 3: Test sul Formato Ottimizzato (LLM-First)
-
-Il testo originale è stato re-ingegnerizzato secondo i principi LLM-First e il test è stato ripetuto.
-
-- **Creazione del Testo Ottimizzato:** Il testo narrativo è stato trasformato in un documento strutturato con tabelle, indici, glossari e gerarchie esplicite.
-    - _Artefatto:_ [`llm-first-saga.md`](./llm-first-saga.md)
-- **Esecuzione del Test:** L'LLM ha letto `llm-first-saga.md` e ha risposto alle stesse domande di prima.
-    - _Artefatto:_ [`llm-first-comprehension.md`](./llm-first-comprehension.md)
-- **Analisi dei Risultati:** L'LLM ha valutato le nuove risposte.
-    - _Artefatto:_ [`llm-first-evaluation.md`](./llm-first-evaluation.md)
-- **Risultato Breve:** Il modello ha ottenuto un punteggio perfetto di **100/100**. L'analisi ha mostrato che le risposte sono state estratte direttamente (lookup) dalle strutture del documento, senza sforzo di inferenza.
-
-### Fase 4: Analisi Comparativa e Validazione
-
-I risultati dei due test sono stati confrontati e l'intero processo è stato sottoposto a una meta-analisi per verificarne la validità.
-
-- **Confronto dei Risultati:** È stato creato un report che mette a confronto le metriche quantitative e qualitative, dichiarando il formato LLM-First vincitore.
-    - _Artefatto:_ [`final-comparison-report.md`](./final-comparison-report.md)
-- **Analisi Qualitativa Approfondita:** È stato analizzato _come_ le risposte dell'LLM sono cambiate, evidenziando il passaggio da "inferenza" a "lettura diretta".
-    - _Artefatto:_ [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md)
-- **Validazione del Processo:** È stata condotta un'analisi sui potenziali bias dell'esperimento, concludendo che il processo era robusto e i risultati validi.
-    - _Artefatto:_ [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)
-- **Analisi Cross-Modello:** Sono stati confrontati i risultati tra diversi LLM (Gemini vs Claude) per analizzare comportamenti divergenti e arricchire le conclusioni.
-    - _Artefatto:_ `model-comparison.md`
+The hypothesis to be validated is that an LLM-First format transforms an LLM's understanding from a process of **fragile inference** to one of **deterministic data extraction**, improving accuracy, speed, and reliability.
 
 ---
 
-## 📂 Manifesto dei File dell'Esperimento
+## 🔬 Test Phases and Flow
 
-La tabella seguente elenca tutti gli artefatti prodotti, con una descrizione del loro ruolo.
+The experiment was conducted following a structured protocol. Each phase produced artifacts (files) that document the process and results.
 
-| File                                                                             | Ruolo nel Processo        | Descrizione e Scopo                                                                                |
-| :------------------------------------------------------------------------------- | :------------------------ | :------------------------------------------------------------------------------------------------- |
-| **Materiale di Partenza**                                                        |
-| [`full-text.md`](./full-text.md)                                                 | **Input (Human-First)**   | Il testo narrativo originale. Serve come controllo negativo (baseline) per il test.                |
-| [`prompt-comprension.md`](./prompt-comprension.md)                               | **Framework di Test**     | Definisce il protocollo, le domande e le metriche per valutare la comprensione in modo oggettivo.  |
-| **Test su Formato Human-First**                                                  |
-| [`human-text-comprehension.md`](./human-text-comprehension.md)                   | **Risultati Grezzi (A)**  | Le risposte fornite dall'LLM durante il test sul testo narrativo.                                  |
-| [`human-text-evaluation.md`](./human-text-evaluation.md)                         | **Valutazione (A)**       | L'analisi critica e le metriche calcolate per il test sul formato Human-First.                     |
-| **Test su Formato LLM-First**                                                    |
-| [`llm-first-saga.md`](./llm-first-saga.md)                                       | **Input (LLM-First)**     | La versione del testo ottimizzata con tabelle, gerarchie e ancore semantiche.                      |
-| [`llm-first-comprehension.md`](./llm-first-comprehension.md)                     | **Risultati Grezzi (B)**  | Le risposte fornite dall'LLM durante il test sul testo strutturato.                                |
-| [`llm-first-evaluation.md`](./llm-first-evaluation.md)                           | **Valutazione (B)**       | L'analisi critica e le metriche calcolate per il test sul formato LLM-First.                       |
-| **Analisi Finale**                                                               |
-| [`final-comparison-report.md`](./final-comparison-report.md)                     | **Report Comparativo**    | Confronta i risultati quantitativi e qualitativi dei due test, dichiarando il vincitore.           |
-| [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md) | **Analisi Qualitativa**   | Analizza in dettaglio _come_ le risposte dell'LLM sono cambiate tra i due formati.                 |
-| [`model-comparison.md`](./model-comparison.md)                                   | **Analisi Cross-Modello** | Confronta i risultati di Gemini e Claude, analizzando i loro comportamenti divergenti.             |
-| **Validazione del Processo**                                                     |
-| [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)                   | **Meta-Analisi**          | Documenta l'analisi sui potenziali bias e la validità complessiva dell'esperimento.                |
-| `readme.md`                                                                      | **Questo Documento**      | Fornisce una mappa e una spiegazione dell'intero flusso di lavoro e dei suoi risultati.            |
+> **Language Note:** The source materials for the experiment ([`full-text.md`](./full-text.md), [`prompt-comprension.md`](./prompt-comprension.md), and the raw results) are in Italian, the original language of the test. The analysis and report files have been translated into English. This separation was maintained to avoid altering the original results.
+
+### Phase 1: Preparation of Test Material
+
+In this phase, the two starting elements were created: the content to be analyzed and the method to evaluate it.
+
+- **Creation of Base Content:** A complex narrative text, the "Saga of Lyra," was written as a perfect example of a "Human-First" format. Information is scattered throughout the prose, making extraction difficult.
+    - _Artifact:_ [`full-text.md`](./full-text.md)
+- **Definition of the Evaluation Framework:** A standardized test prompt was created to measure an LLM's comprehension across multiple dimensions (recall, details, relationships, etc.) and calculate an objective score.
+    - _Artifact:_ [`prompt-comprension.md`](./prompt-comprension.md)
+
+### Phase 2: Baseline Test (Human-First Format)
+
+The comprehension test was run on the "Human-First" text to establish a baseline performance metric.
+
+- **Test Execution:** The LLM read [`full-text.md`](./full-text.md) and answered the questions from the evaluation framework.
+    - _Artifact:_ [`human-text-comprehension.md`](./human-text-comprehension.md)
+- **Results Analysis:** The LLM then evaluated its own answers, calculating performance metrics.
+    - _Artifact:_ [`human-text-evaluation.md`](./human-text-evaluation.md)
+- **Brief Result:** The model achieved a score of **94.15/100**. A good result, but the analysis revealed omissions and an "inference" effort to reconstruct knowledge.
+
+### Phase 3: Test on Optimized Format (LLM-First)
+
+The original text was re-engineered according to LLM-First principles, and the test was repeated.
+
+- **Creation of Optimized Text:** The narrative text was transformed into a structured document with tables, indexes, glossaries, and explicit hierarchies.
+    - _Artifact:_ [`llm-first-saga.md`](./llm-first-saga.md)
+- **Test Execution:** The LLM read [`llm-first-saga.md`](./llm-first-saga.md) and answered the same questions as before.
+    - _Artifact:_ [`llm-first-comprehension.md`](./llm-first-comprehension.md)
+- **Results Analysis:** The LLM evaluated the new answers.
+    - _Artifact:_ [`llm-first-evaluation.md`](./llm-first-evaluation.md)
+- **Brief Result:** The model achieved a perfect score of **100/100**. The analysis showed that the answers were directly extracted (looked up) from the document's structures, without any inference effort.
+
+### Phase 4: Comparative Analysis and Validation
+
+The results of the two tests were compared, and the entire process was subjected to a meta-analysis to verify its validity.
+
+- **Results Comparison:** A report was created comparing quantitative and qualitative metrics, declaring the LLM-First format the winner.
+    - _Artifact:_ [`final-comparison-report.md`](./final-comparison-report.md)
+- **In-depth Qualitative Analysis:** It was analyzed _how_ the LLM's answers changed, highlighting the shift from "inference" to "direct reading."
+    - _Artifact:_ [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md)
+- **Process Validation:** An analysis of potential biases in the experiment was conducted, concluding that the process was robust and the results were valid.
+    - _Artifact:_ [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)
+- **Cross-Model Analysis:** Results between different LLMs (Gemini vs. Claude) were compared to analyze divergent behaviors and enrich the conclusions.
+    - _Artifact:_ [`model-comparison.md`](./model-comparison.md)
 
 ---
 
-## 🏁 Conclusione Finale
+## 📂 Manifest of Experiment Files
 
-L'esperimento ha dimostrato con successo che la strutturazione della documentazione secondo i principi **LLM-First** non è un semplice miglioramento, ma un cambiamento di paradigma. Rende la conoscenza direttamente "apprendibile" e utilizzabile da un'intelligenza artificiale, trasformandola da un "turista" nel testo a un "esperto" del dominio.
+The following table lists all the artifacts produced, with a description of their role.
 
-L'analisi cross-modello (es. con Claude) ha inoltre arricchito la tesi, mostrando che, sebbene l'ipotesi generale resti valida, i benefici si manifestano in modo diverso (accuratezza vs efficienza) a seconda delle capacità del modello e della complessità del task.
+| File                                                                             | Role in the Process       | Description and Purpose                                                                    |
+| :------------------------------------------------------------------------------- | :------------------------ | :----------------------------------------------------------------------------------------- |
+| **Starting Material**                                                            |
+| [`full-text.md`](./full-text.md)                                                 | **Input (Human-First)**   | The original narrative text. Serves as a negative control (baseline) for the test.         |
+| [`prompt-comprension.md`](./prompt-comprension.md)                               | **Test Framework**        | Defines the protocol, questions, and metrics to evaluate comprehension objectively.        |
+| **Test on Human-First Format**                                                   |
+| [`human-text-comprehension.md`](./human-text-comprehension.md)                   | **Raw Results (A)**       | The answers provided by the LLM during the test on the narrative text.                     |
+| [`human-text-evaluation.md`](./human-text-evaluation.md)                         | **Evaluation (A)**        | The critical analysis and metrics calculated for the test on the Human-First format.       |
+| **Test on LLM-First Format**                                                     |
+| [`llm-first-saga.md`](./llm-first-saga.md)                                       | **Input (LLM-First)**     | The version of the text optimized with tables, hierarchies, and semantic anchors.          |
+| [`llm-first-comprehension.md`](./llm-first-comprehension.md)                     | **Raw Results (B)**       | The answers provided by the LLM during the test on the structured text.                    |
+| [`llm-first-evaluation.md`](./llm-first-evaluation.md)                           | **Evaluation (B)**        | The critical analysis and metrics calculated for the test on the LLM-First format.         |
+| **Final Analysis**                                                               |
+| [`final-comparison-report.md`](./final-comparison-report.md)                     | **Comparative Report**    | Compares the quantitative and qualitative results of the two tests, declaring the winner.  |
+| [`comprehension-comparison-analysis.md`](./comprehension-comparison-analysis.md) | **Qualitative Analysis**  | Analyzes in detail _how_ the LLM's answers changed between the two formats.                |
+| [`model-comparison.md`](./model-comparison.md)                                   | **Cross-Model Analysis**  | Compares the results of Gemini and Claude, analyzing their divergent behaviors.            |
+| **Process Validation**                                                           |
+| [`experiment-meta-analysis.md`](./experiment-meta-analysis.md)                   | **Meta-Analysis**         | Documents the analysis of potential biases and the overall validity of the experiment.     |
+| [`readme.en.md`](./readme.en.md)                                                 | **This Document**         | Provides a map and an explanation of the entire workflow and its results.                  |
+
+---
+
+## 🏁 Final Conclusion
+
+The experiment successfully demonstrated that structuring documentation according to **LLM-First** principles is not just an improvement, but a paradigm shift. It makes knowledge directly "learnable" and usable by an artificial intelligence, transforming it from a "tourist" in the text to a "domain expert."
+
+The cross-model analysis (e.g., with Claude) further enriched the thesis, showing that while the general hypothesis remains valid, the benefits manifest differently (accuracy vs. efficiency) depending on the model's capabilities and the complexity of the task.
